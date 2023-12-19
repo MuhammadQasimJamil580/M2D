@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    #   AWS HealthCare RDS DATABASE CONFIG
+    url : jdbc:mysql://smshealthcare.cykefzwmfnix.us-east-1.rds.amazonaws.com/sms_global?zeroDateTimeBehavior=convertToNull
+    username: admin
+    password: ZnRAqnU8PFaGe8VyRhvo
+
+baseurl: healthcare.m2d.com
+path: /opt/deployment/m2d/images/
+path2: /opt/deployment/m2d/ReportFiles/
+port:
+  user-service: 6262
+  administration-service: 6363

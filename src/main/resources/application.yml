@@ -1,0 +1,53 @@
+server:
+  port: 6464
+spring:
+  profiles:
+    active: stag-local # Change this profile to stag-local if running on stag server
+  main:
+    allow-circular-references: true
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+        generate_statistics: true
+    show-sql: true
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+  application:
+    name: ea-services
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:6161/eureka
+  instance:
+    hostname: localhost
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+
+
+FormatSQL: spring.jpa.properties.hibernate.format_sql
+SQLDialect: org.hibernate.dialect.MySQLDialect
+
+standardURL: http://${baseurl}:${port.user-service}/standard/getAll
+subCategoryURL: http://${baseurl}:${port.user-service}/subcategory/getAllSubCategoryHMP
+systemUserURL: http://${baseurl}:${port.user-service}/user/allUserHashMap
+tagURL: http://${baseurl}:${port.administration-service}/tag/alltags
+categoryByScopeURL: http://${baseurl}:${port.user-service}/category/scope/
+categoryURL: http://${baseurl}:${port.user-service}/category/getcategory
+categoryURL2: http://${baseurl}:${port.user-service}/category/getScopeWiseCategoryIndexList
+gassURL: http://${baseurl}:${port.user-service}/GHGGasses/allGassesHashMap
+organizationURL: http://${baseurl}:${port.user-service}/organization/ForOrganizationSite
+periodURL: http://${baseurl}:${port.administration-service}/period/getperiod
+periodURL2: http://${baseurl}:${port.administration-service}/period/getPeriodNameandidsForGraph
+siteURL: http://${baseurl}:${port.administration-service}/site/getAllOrgSite
+tenantURL: http://${baseurl}:${port.user-service}/getAllTanetData
+RefferenceDataURL: http://${baseurl}:${port.user-service}/subcategory/getAllReffrenceData
+userHashMap : http://${baseurl}:${port.user-service}/user/allUserHashMap
+imagePath : ${path}
+filePath : ${path2}

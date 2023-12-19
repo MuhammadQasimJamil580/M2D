@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    #   AWS RDS DATABASE CONFIG
+    url: jdbc:mysql://smsglobal.cykefzwmfnix.us-east-1.rds.amazonaws.com/sms_global?zeroDateTimeBehavior=convertToNull
+    username: admin
+    password: Rgxw1CJjKdwnhnTXQUcK
+
+baseurl: sports.m2d.com
+path: /opt/deployment/m2d/images/
+path2: /opt/deployment/m2d/ReportFiles/
+port:
+  user-service: 6262
+  administration-service: 6363

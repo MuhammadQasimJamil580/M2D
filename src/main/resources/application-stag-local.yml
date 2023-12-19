@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    ##    AWS RDS DATABASE CONFIG
+    url: jdbc:mysql://v2.rovermd.com:3306/sms_global?zeroDateTimeBehavior=convertToNull
+    username: tabishNew
+    password: tP@ssw0rd
+
+baseurl: localhost
+#path: "C:\\Users\\s.ijaz\\Pictures\\"
+path: /opt/deployment/m2d/images/
+path2: /opt/deployment/m2d/ReportFiles/
+#path2: C:\\Users\\s.ijaz\\Documents\\pdftester\\
+port:
+  user-service: 6262
+  administration-service: 6363
